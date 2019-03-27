@@ -1,5 +1,7 @@
 import React from "react";
 import Quote from "./Quote";
+
+
 // src/Quotes.js
 const quotes = [
   {
@@ -36,7 +38,7 @@ const quotes = [
 
 const Quotes = () => (
   <div>
-    {quotes.map(quote => <Quote {...quote} />)}
+    {quotes.map(quote => <Quote {...quote} /> )}
   </div>
 );
 

@@ -1,7 +1,9 @@
 import React from "react";
+import Lamp from "./Lamp";
 
 const Quote = ({ id, quote, character, image }) => (
   <figure key={id}>
+    <Lamp />
     <img src={image} alt={character} />
     <figcaption>
       <blockquote>{quote}</blockquote>
