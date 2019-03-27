@@ -10,20 +10,19 @@ class App extends Component {
     super(props);
     this.state = {
       isWorking : false,
-      // activeLogo : 'App-logo-isWorking',
+    
     };
   }
   handleClick = () => {
-    this.setState({ isWorking: !this.state.isWorking });
-    // this.state.isWorking 
-    //   ? this.setState({ activeLogo: 'App-logo' })
-    //   : this.setState(({ activeLogo: 'App-logo-isWorking' }))
+    this.setState({ isWorking: !this.state.isWorking,  });
   };
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          {this.state.isWorking
+          ? <img src={logo} className="App-logo" alt="logo" />
+          : <img src={logo} className="App-logo-isWorking" alt="logo" />}
           <h1 className="App-title">Simpsons Quotes</h1>
           <button onClick={this.handleClick}>Homer is working</button>
         </header>
