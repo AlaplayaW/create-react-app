@@ -10,21 +10,27 @@ class App extends Component {
     super(props);
     this.state = {
       isWorking : false,
-    
+      on: props.on,
     };
   }
   handleClick = () => {
-    this.setState({ isWorking: !this.state.isWorking,  });
+    this.setState({ 
+      isWorking: !this.state.isWorking,
+      on: !this.state.on});
   };
   render() {
+    const light = this.state.on ? 'Homer is working' : 'Homer is not working !';
     return (
       <div className="App">
         <header className="App-header">
           {this.state.isWorking
-          ? <img src={logo} className="App-logo" alt="logo" />
-          : <img src={logo} className="App-logo-isWorking" alt="logo" />}
+          ? <img src={logo} className="App-logo-isWorking" alt="logo" />
+          : <img src={logo} className="App-logo" alt="logo" />}
           <h1 className="App-title">Simpsons Quotes</h1>
-          <button onClick={this.handleClick}>Homer is working</button>
+          <button 
+            className="App-change" 
+            onClick={this.handleClick}>{light.toUpperCase()}
+          </button>
         </header>
         <Quotes />
       </div>

@@ -14,6 +14,16 @@
   pointer-events: none;  
 }
 
+.App-change {
+  background-color: red;
+  border-radius: 50px;
+  height: 5vh;
+  }
+
+.App-change:focus {
+  border-radius: 50px;
+  height: 5vh;
+  }
 
 .App-header {
   background-color: #282c34;
