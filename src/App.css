@@ -14,13 +14,7 @@
   pointer-events: none;  
 }
 
-.App-change {
-  background-color: red;
-  border-radius: 50px;
-  height: 5vh;
-  }
-
-.App-change:focus {
+.App button {
   border-radius: 50px;
   height: 5vh;
   }
