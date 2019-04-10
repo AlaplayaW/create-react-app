@@ -1,10 +1,9 @@
+import "./App.css";
 import React, { Component } from "react";
 import { Route, BrowserRouter, Switch, Link } from "react-router-dom";
 import Home from "./Home";
 import History from "./History";
-import "./App.css";
 
-// import Product from './Product';
 
 class App extends Component {
 	render() {
@@ -14,19 +13,31 @@ class App extends Component {
 					<div>
 						<ul>
 							<li>
-								<Link exact to="/" activeClassName="activeRoute" activeStyle={{ color: 'teal' }}>Home</Link>
+								<Link
+									exact
+									to="/"
+									className="tags"
+									activeStyle={{ color: "red" }}
+								>
+									Home
+								</Link>
 							</li>
 							<li>
-								<Link to="/notre-histoire">History</Link>
+								<Link
+									to="/notre-histoire"
+									className="tags"
+									activeStyle={{ color: "red" }}
+								>
+									History
+								</Link>
 							</li>
 						</ul>
 
 						<hr />
 
 						<Route exact path="/" component={Home} />
-            <Route path="/notre-histoire" component={History} />
+						<Route path="/notre-histoire" component={History} />
 					</div>
-
 				</Switch>
 			</BrowserRouter>
 		);
