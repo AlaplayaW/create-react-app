@@ -17,7 +17,6 @@ class App extends Component {
 									exact
 									to="/"
 									className="tags"
-									activeStyle={{ color: "red" }}
 								>
 									Home
 								</Link>
@@ -26,7 +25,6 @@ class App extends Component {
 								<Link
 									to="/notre-histoire"
 									className="tags"
-									activeStyle={{ color: "red" }}
 								>
 									History
 								</Link>

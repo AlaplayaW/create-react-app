@@ -1,4 +1,4 @@
 
-.activeStyled {
-	color: teal;
+.tags:focus {
+	color: red;
 }
